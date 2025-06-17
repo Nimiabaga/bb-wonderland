@@ -1,109 +1,110 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>B&B Wonderland Hotel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="B&B Wonderland Hotel Logo" class="logo" />
+    <h1 style="color: #be9548; font-size: 2.2rem; margin: 0;">B&B Wonderland Hotel</h1>
+    <p class="slogan">Affordable Comfort. Asian & Korean Delights. Port Harcourt Luxury.</p>
+  </header>
 
-  <!-- 🌙 Dark Mode Toggle -->
-  <button id="toggle-dark" class="toggle-btn">🌙</button>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>B&B Wonderland Hotel</h1>
-    <p>229 Bodo Road, Off Woji GRA Phase 2, Port Harcourt, Rivers State</p>
-    <p class="slogan">Comfortable rooms · Tasty Nigerian dishes · Affordable lodging</p>
-  </section>
-
-  <!-- Food Image Section -->
-  <section class="food-image">
-    <img src="jollof.jpg" alt="Delicious Nigerian Jollof Rice" />
-    <p class="caption">Enjoy Jollof Rice, Chicken, and More</p>
-  </section>
-
-  <!-- Drinks Menu -->
-  <section class="menu" id="drinks">
-    <h2>Drink Menu</h2>
+  <nav>
     <ul>
-      <li><span>Heineken</span><span>₦1,200</span></li>
-      <li><span>Origin</span><span>₦1,000</span></li>
-      <li><span>Smirnoff Ice</span><span>₦1,100</span></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#drinks">Drinks</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
-
-  <!-- Food Menu -->
-  <section class="menu" id="food">
-  <h2>Food Menu</h2>
-  <div class="menu-card">
-    <img src="egusi.jpg" alt="Egusi Soup" />
-    <div>
-      <h4>Pounded Yam & Egusi</h4>
-      <p>₦3,000</p>
-    </div>
-  </div>
-  <div class="menu-card">
-    <img src="jollof.jpg" alt="Jollof Rice & Chicken" />
-    <div>
-      <h4>Jollof Rice & Chicken</h4>
-      <p>₦2,500</p>
-    </div>
-  </div>
-  <div class="menu-card">
-    <img src="plantain.jpg" alt="Fried Plantain & Stew" />
-    <div>
-      <h4>Fried Plantain & Stew</h4>
-      <p>₦1,800</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Rooms Section -->
-  <section class="menu" id="rooms">
-  <h2>Available Rooms</h2>
-
-  <div class="menu-card">
-    <img src="standard-room.jpg" alt="Standard Room" />
-    <div>
-      <h4>Standard Room</h4>
-      <p>₦8,000 / night</p>
-    </div>
-  </div>
-
-  <div class="menu-card">
-    <img src="deluxe-room.jpg" alt="Deluxe Room" />
-    <div>
-      <h4>Deluxe Room</h4>
-      <p>₦12,000 / night</p>
-    </div>
-  </div>
-
-  <div class="menu-card">
-    <img src="executive-suite.jpg" alt="Executive Suite" />
-    <div>
-      <h4>Executive Suite</h4>
-      <p>₦18,000 / night</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Bottom Navigation -->
-  <nav class="bottom-nav">
-    <a href="#drinks">Drinks</a>
-    <a href="#food">Food</a>
-    <a href="#rooms">Rooms</a>
   </nav>
 
-  <script>
-    const toggleBtn = document.getElementById("toggle-dark");
-    toggleBtn.onclick = () => {
-      document.documentElement.classList.toggle("dark");
-    };
-  </script>
+  <section id="food">
+    <h2>Our Meals</h2>
+    <div class="menu-card">
+      <img src="jollof.jpg" alt="Jollof Rice" />
+      <div>
+        <h4>Jollof Rice with Chicken</h4>
+        <p>#3,000</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="egusi.jpg" alt="Egusi Soup" />
+      <div>
+        <h4>Egusi Soup & Pounded Yam</h4>
+        <p>#2,500</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="plantain.jpg" alt="Plantain Dish" />
+      <div>
+        <h4>Fried Plantain & Sauce</h4>
+        <p>#2,000</p>
+      </div>
+    </div>
+  </section>
 
+  <section id="drinks">
+    <h2>Drinks</h2>
+    <div class="menu-card">
+      <img src="drink1.jpg" alt="Cocktail" />
+      <div>
+        <h4>Fruit Cocktail</h4>
+        <p>#1,500</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="drink2.jpg" alt="Wine" />
+      <div>
+        <h4>Red Wine</h4>
+        <p>#3,000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="menu-card">
+      <img src="standard-room.jpg" alt="Standard Room" />
+      <div>
+        <h4>Standard Room</h4>
+        <p>#10,000 / night</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="deluxe-room.jpg" alt="Deluxe Room" />
+      <div>
+        <h4>Deluxe Room</h4>
+        <p>#15,000 / night</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="executive-suite.jpg" alt="Executive Suite" />
+      <div>
+        <h4>Executive Suite</h4>
+        <p>#25,000 / night</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 229 Bodo Road, Off Woji GRA Phase 2, Port Harcourt, Rivers State</p>
+    <p>📞 Call Us: <a href="tel:+2348052991894" style="color:#be9548;">+234 805 299 1894</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 B&B Wonderland Hotel. All rights reserved.
+  </footer>
+
+  <div class="bottom-nav">
+    <a href="#food">Food</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#contact">Contact</a>
+  </div>
 </body>
 </html>
