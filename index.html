@@ -1,89 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>B&B Wonderland Hotel</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .content-section {
+      display: none;
+    }
+    .content-section.active {
+      display: block;
+    }
+  </style>
 </head>
-<body class="dark">
+<body>
   <header>
     <img src="logo.png" alt="B&B Wonderland Hotel Logo" class="logo" />
     <h1 style="color: #be9548; font-size: 2.2rem; margin: 0;">B&B Wonderland Hotel</h1>
-    <p class="slogan">Affordable Comfort. Asian & Korean Delights. Port Harcourt Luxury.</p>
+    <p class="slogan">Affordable Comfort in Port Harcourt Luxury.</p>
   </header>
 
-  <!-- Removed the top nav here -->
+  <div class="bottom-nav">
+    <a href="#" data-target="food">Food</a>
+    <a href="#" data-target="drinks">Drinks</a>
+    <a href="#" data-target="rooms">Rooms</a>
+    <a href="#" data-target="contact">Contact</a>
+  </div>
 
-  <section id="food">
+  <section id="food" class="content-section active">
     <h2>Our Meals</h2>
     <div class="menu-card">
       <img src="jollof.jpg" alt="Jollof Rice" />
-      <div>
-        <h4>Jollof Rice with Chicken</h4>
-        <p>#3,000</p>
-      </div>
+      <div><h4>Jollof Rice with Chicken</h4><p>₦3,000</p></div>
     </div>
     <div class="menu-card">
       <img src="egusi.jpg" alt="Egusi Soup" />
-      <div>
-        <h4>Egusi Soup & Pounded Yam</h4>
-        <p>#2,500</p>
-      </div>
+      <div><h4>Egusi Soup & Pounded Yam</h4><p>₦2,500</p></div>
     </div>
     <div class="menu-card">
       <img src="plantain.jpg" alt="Plantain Dish" />
-      <div>
-        <h4>Fried Plantain & Sauce</h4>
-        <p>#2,000</p>
-      </div>
+      <div><h4>Fried Plantain & Sauce</h4><p>₦2,000</p></div>
     </div>
   </section>
 
-  <section id="drinks">
+  <section id="drinks" class="content-section">
     <h2>Drinks</h2>
     <div class="menu-card">
-      <img src="drink1.jpg" alt="Cocktail" />
-      <div>
-        <h4>Fruit Cocktail</h4>
-        <p>#1,500</p>
-      </div>
+      <img src="cocktail.jpg" alt="Fruit Cocktail" />
+      <div><h4>Fruit Cocktail</h4><p>₦1,500</p></div>
     </div>
     <div class="menu-card">
-      <img src="drink2.jpg" alt="Wine" />
-      <div>
-        <h4>Red Wine</h4>
-        <p>#3,000</p>
-      </div>
+      <img src="smirnoff.jpg" alt="Smirnoff" />
+      <div><h4>Smirnoff</h4><p>₦3,000</p></div>
     </div>
   </section>
 
-  <section id="rooms">
+  <section id="rooms" class="content-section">
     <h2>Our Rooms</h2>
     <div class="menu-card">
       <img src="standard-room.jpg" alt="Standard Room" />
-      <div>
-        <h4>Standard Room</h4>
-        <p>#10,000 / night</p>
-      </div>
+      <div><h4>Standard Room</h4><p>₦10,000 / night</p></div>
     </div>
     <div class="menu-card">
       <img src="deluxe-room.jpg" alt="Deluxe Room" />
-      <div>
-        <h4>Deluxe Room</h4>
-        <p>#15,000 / night</p>
-      </div>
+      <div><h4>Deluxe Room</h4><p>₦15,000 / night</p></div>
     </div>
     <div class="menu-card">
       <img src="executive-suite.jpg" alt="Executive Suite" />
-      <div>
-        <h4>Executive Suite</h4>
-        <p>#25,000 / night</p>
-      </div>
+      <div><h4>Executive Suite</h4><p>₦25,000 / night</p></div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="content-section">
     <h2>Contact Us</h2>
     <p>📍 229 Bodo Road, Off Woji GRA Phase 2, Port Harcourt, Rivers State</p>
     <p>📞 Call Us: <a href="tel:+2348052991894" style="color:#be9548;">+234 805 299 1894</a></p>
@@ -93,11 +82,22 @@
     &copy; 2025 B&B Wonderland Hotel. All rights reserved.
   </footer>
 
-  <div class="bottom-nav">
-    <a href="#food">Food</a>
-    <a href="#drinks">Drinks</a>
-    <a href="#rooms">Rooms</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <script>
+    const links = document.querySelectorAll('.bottom-nav a');
+    const sections = document.querySelectorAll('.content-section');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-target');
+
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
