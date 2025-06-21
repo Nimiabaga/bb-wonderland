@@ -70,22 +70,17 @@ header {
   border-radius: 6px 6px 0 0;
 }
 
-/* Reduced Text Box Height */
-.food-info {
-  padding: 0.2rem;
-  line-height: 1.1;
-}
 
 .food-info h4 {
   margin: 0.1rem 0;
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .food-info p {
   margin: 0;
   color: #be9548;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
@@ -111,7 +106,7 @@ header {
 }
 
 /* Mobile Always 2-Per-Row */
-@media (max-width: 600px) {
+@media (max-width: 200px) {
   .food-card {
     flex: 0 0 48%;
   }
