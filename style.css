@@ -8,18 +8,18 @@ body {
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 10px 10px 0;
 }
 
 .logo {
-  width: 120px;
+  width: 80px;
   height: auto;
-  margin-bottom: 10px;
   object-fit: contain;
+  margin-bottom: 5px;
 }
 
 .hero-title {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #be9548;
   margin: 0;
 }
@@ -27,8 +27,64 @@ header {
 .slogan {
   font-style: italic;
   color: #aaa;
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+/* MENU Banner */
+.menu-banner {
+  background-color: #1f1f1f;
+  color: #be9548;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-top: 2px solid #be9548;
+  border-bottom: 2px solid #be9548;
+  margin: 0.8rem 0;
+}
+
+/* Featured Meals Grid */
+.featured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.food-card {
+  flex: 0 0 calc(50% - 0.7rem);
+  background: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 0.4rem;
+}
+
+.food-card img {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.food-info {
+  padding: 0.4rem;
+}
+
+.food-info h4 {
+  margin: 0.3rem 0 0.1rem;
+  color: #fff;
   font-size: 0.9rem;
-  margin-top: 0.5rem;
+}
+
+.food-info p {
+  margin: 0;
+  color: #be9548;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 /* Bottom Navigation */
@@ -41,7 +97,7 @@ header {
   border-top: 1px solid #333;
   display: flex;
   justify-content: space-around;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   z-index: 1000;
 }
 
@@ -49,80 +105,24 @@ header {
   color: #be9548;
   font-weight: bold;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-/* Featured Meals Grid */
-.featured-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.food-card {
-  flex: 0 0 calc(50% - 1rem);
-  background: #1f1f1f;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  overflow: hidden;
-  padding-bottom: 0.5rem;
-}
-
-.food-card img {
-  width: 100%;
-  height: 100px; /* Smaller image height */
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.food-info {
-  padding: 0.5rem;
-}
-
-.food-info h4 {
-  margin: 0.5rem 0 0.2rem;
-  color: #fff;
-}
-
-.food-info p {
-  margin: 0;
-  color: #be9548;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #111;
-  color: #fff;
-  font-size: 14px;
-}
-
-/* Mobile responsiveness */
+/* Mobile Always 2-Per-Row */
 @media (max-width: 600px) {
-  /* Removed .food-card flex override to keep 2 per row */
+  .food-card {
+    flex: 0 0 48%;
+  }
+
   .logo {
-    width: 80px;
+    width: 60px;
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-}
 
-/* MENU Banner */
-.menu-banner {
-  background-color: #1f1f1f;
-  color: #be9548;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 2rem;
-  font-weight: bold;
-  border-top: 2px solid #be9548;
-  border-bottom: 2px solid #be9548;
-  margin: 1rem 0;
+  .slogan {
+    font-size: 0.7rem;
+  }
 }
