@@ -54,18 +54,18 @@
     <p class="slogan">Explore Our Food Menu</p>
   </header>
 
-  <!-- Menu Buttons -->
-  <div class="menu-toggle">
-    <button class="active" onclick="showMenu('breakfast')">Breakfast Menu</button>
-    <button onclick="showMenu('lunch')">Lunch & Dinner Menu</button>
-    <button onclick="showMenu('continental')">Continental Menu</button>
-  </div>
+  <!-- Toggle Buttons -->
+<div class="menu-toggle">
+  <a href="breakfast.html" class="menu-link" style="padding: 0.6rem 1.5rem; background-color: #be9548; color: #000; border-radius: 6px; font-weight: bold; text-decoration: none;">Breakfast Menu</a>
+  <button onclick="showMenu('lunch')">Lunch & Dinner Menu</button>
+  <button onclick="showMenu('continental')">Continental Menu</button>
+</div>
 
-  <!-- Menu Sections -->
+
+  <!-- 🥞 Breakfast Section -->
   <section id="breakfast" class="menu-section active">
     <h2 class="menu-header">🍽️ National Breakfast</h2>
     <div class="food-grid">
-      <!-- Add your food cards here like you did before -->
       <div class="food-card">
         <img src="images/pap.jpg" alt="Pap" />
         <div class="food-info">
@@ -82,68 +82,32 @@
         </div>
       </div>
 
-      <!-- Add more National Breakfast items here -->
-
+      <div class="food-card">
+        <img src="images/yam.jpg" alt="Yam" />
+        <div class="food-info">
+          <h4>Yam (Fried / Boiled)</h4>
+          <p>₦3,000</p>
+        </div>
+      </div>
     </div>
-    <h4 class="meal-caption">
-      🍽 Option A: Yam / Plantain / Rice with Sauce (Fish or Egg)<br />
-      Complimentary Juice, Tea, Coffee, or Hot Choco.
-    </h4>
   </section>
 
+  <!-- 🍛 Lunch Section -->
   <section id="lunch" class="menu-section">
     <h2 class="menu-header">🍛 Lunch & Dinner Menu</h2>
     <div class="food-grid">
-      <div class="food-card">
-        <img src="images/goatmeat.jpg" alt="Goat Meat with Chips" />
-        <div class="food-info">
-          <h4>Goat Meat (Chips)</h4>
-          <p>₦6,000</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img src="images/jollof.jpg" alt="Jollof Rice" />
-        <div class="food-info">
-          <h4>Jollof Rice</h4>
-          <p>₦7,000</p>
-        </div>
-      </div>
-
-      <!-- Add more Lunch items -->
+      <p style="color: #aaa;">Coming soon...</p>
     </div>
-    <h4 class="meal-caption">Room service available — ₦500 tray charge applies.</h4>
   </section>
 
+  <!-- 🌍 Continental Section -->
   <section id="continental" class="menu-section">
     <h2 class="menu-header">🌍 Continental Menu</h2>
     <div class="food-grid">
-      <div class="food-card">
-        <img src="images/oats.jpg" alt="Oats" />
-        <div class="food-info">
-          <h4>Oat / Cereal</h4>
-          <p>₦2,500</p>
-        </div>
-      </div>
-
-      <div class="food-card">
-        <img src="images/bacon.jpg" alt="Bacon" />
-        <div class="food-info">
-          <h4>Bacon</h4>
-          <p>₦2,000</p>
-        </div>
-      </div>
-
-      <!-- Add more Continental items -->
+      <p style="color: #aaa;">Coming soon...</p>
     </div>
-
-    <h4 class="meal-caption">
-      🍽 Option A: Cereal / Oats with Bread & Egg<br />
-      Complimentary Juice, Tea, Coffee, or Hot Choco.
-    </h4>
   </section>
 
-  <!-- Bottom Navigation -->
   <nav class="bottom-nav">
     <a href="index.html">Home</a>
     <a href="food.html">Food</a>
@@ -153,14 +117,19 @@
   </nav>
 
   <script>
-    function showMenu(id) {
-      document.querySelectorAll('.menu-section').forEach(section => {
+    function showMenu(sectionId) {
+      const sections = document.querySelectorAll('.menu-section');
+      const buttons = document.querySelectorAll('.menu-toggle button');
+
+      sections.forEach(section => {
         section.classList.remove('active');
       });
-      document.querySelectorAll('.menu-toggle button').forEach(btn => {
+
+      buttons.forEach(btn => {
         btn.classList.remove('active');
       });
-      document.getElementById(id).classList.add('active');
+
+      document.getElementById(sectionId).classList.add('active');
       event.target.classList.add('active');
     }
   </script>
