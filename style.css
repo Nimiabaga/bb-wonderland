@@ -21,6 +21,7 @@ header {
   object-fit: contain;
 }
 
+.hero-title,
 h1 {
   font-size: 2rem;
   color: #be9548;
@@ -34,135 +35,85 @@ h1 {
   margin-top: 0.5rem;
 }
 
-/* === Section Styling === */
-section {
-  padding: 20px;
-  text-align: center;
-}
-
-section h2 {
+/* === Menu Banner === */
+.menu-banner {
+  background-color: #1f1f1f;
   color: #be9548;
-  margin-bottom: 10px;
-}
-
-section img {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
-}
-
-.caption {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
-
-/* === Menu Button === */
-.menu-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #be9548;
-  color: #000;
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
+  text-align: center;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
   font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  border-top: 2px solid #be9548;
+  border-bottom: 2px solid #be9548;
+  margin: 0.6rem 0;
 }
 
-.menu-button:hover {
-  background-color: #d2a25b;
+/* === Grid Layout: 2 Items Per Row === */
+.food-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-/* === Navigation Bar === */
-nav {
+.food-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  width: calc(50% - 1rem);
+  max-width: 160px;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* === Food Info Box Smaller === */
+.food-info {
+  padding: 0.3rem;
+  line-height: 1.1;
+}
+
+.food-info h4 {
+  color: #fff;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+}
+
+.food-info p {
+  color: #be9548;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* === Bottom Navigation === */
+.bottom-nav {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   background: #111;
   border-top: 1px solid #333;
   display: flex;
   justify-content: space-around;
-  padding: 0.75rem 0;
+  padding: 0.4rem 0;
   z-index: 1000;
 }
 
-nav a {
+.bottom-nav a {
   color: #be9548;
   font-weight: bold;
   text-decoration: none;
-  font-size: 14px;
-}
-
-/* === Menu Card Layout === */
-.menu-card,
-.food-card {
-  display: flex;
-  align-items: center;
-  background: #1a1a1a;
-  padding: 1rem;
-  border-radius: 10px;
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 300px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  text-align: center;
-  flex-direction: column;
-}
-
-.menu-card img,
-.food-card img {
-  width: 100%;
-  max-height: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.food-info,
-.menu-card div {
-  padding: 0.5rem;
-}
-
-.food-info h4,
-.menu-card h4 {
-  color: #fff;
-  font-size: 1rem;
-  margin: 0.5rem 0 0.2rem;
-}
-
-.food-info p,
-.menu-card p {
-  color: #be9548;
-  font-weight: bold;
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* === Horizontal Featured Scroll === */
-.featured-scroll {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem;
-  scroll-snap-type: x mandatory;
-}
-
-.featured-scroll .food-card {
-  flex: 0 0 auto;
-  width: 200px;
-  scroll-snap-align: center;
-}
-
-/* === Footer === */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #111;
-  color: #fff;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 /* === Responsive === */
@@ -171,15 +122,20 @@ footer {
     width: 60px;
   }
 
-  nav a {
-    font-size: 13px;
+  .hero-title {
+    font-size: 1.5rem;
   }
 
-  section h2 {
-    font-size: 18px;
+  .slogan {
+    font-size: 0.75rem;
   }
 
-  section img {
-    max-width: 90%;
+  .food-card {
+    width: 48%;
+  }
+
+  .food-info h4,
+  .food-info p {
+    font-size: 0.7rem;
   }
 }
