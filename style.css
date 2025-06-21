@@ -103,18 +103,29 @@ h1 {
 /* === Meal Captions === */
 .meal-caption {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #ddd;
-  margin: 1rem auto 2rem;
-  padding: 0 1rem;
-  max-width: 600px;
+  margin: 1.5rem auto 2rem;
+  padding: 1rem;
+  max-width: 90%;
+  line-height: 1.5;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
 }
 
+/* === Tray Note === */
 .tray-note {
   text-align: center;
-  font-size: 0.8rem;
-  color: #888;
-  margin: 2rem 1rem 4rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 2rem auto 5rem;
+  padding: 1rem;
+  max-width: 90%;
+  background-color: #111;
+  border-radius: 10px;
+  border: 1px solid #333;
+  line-height: 1.4;
 }
 
 /* === Bottom Navigation === */
