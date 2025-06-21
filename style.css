@@ -91,7 +91,7 @@ h1 {
 .food-info p {
   color: #be9548;
   font-weight: bold;
-  font-size: 0.85rem; /* 👈 Increased from 0.75rem */
+  font-size: 0.95rem; /* 👈 Increased from 0.75rem */
   margin: 0;
 }
 
@@ -113,7 +113,7 @@ h1 {
   color: #be9548;
   font-weight: bold;
   text-decoration: none;
-  font-size: 13px; /* 👈 Increased from 11px */
+  font-size: 20px; /* 👈 Increased from 11px */
 }
 
 /* === Responsive === */
