@@ -5,57 +5,145 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Menu - B&B Wonderland Hotel</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .menu-toggle button {
+      padding: 0.6rem 1.5rem;
+      background-color: #be9548;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .menu-toggle button.active {
+      background-color: #d2a558;
+    }
+
+    .menu-section {
+      display: none;
+      padding-bottom: 2rem;
+    }
+
+    .menu-section.active {
+      display: block;
+    }
+
+    .menu-header {
+      text-align: center;
+      color: #be9548;
+      margin: 1.2rem 0 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="images/logo.png" alt="B&B Wonderland Hotel Logo" class="logo" />
     <h1 class="hero-title">B&B Wonderland Hotel</h1>
-    <p class="slogan">Explore Our Breakfast Menu</p>
+    <p class="slogan">Explore Our Food Menu</p>
   </header>
 
-  <section class="section active">
-    <h2 class="menu-section">🍽️ National Breakfast</h2>
+  <!-- Menu Buttons -->
+  <div class="menu-toggle">
+    <button class="active" onclick="showMenu('breakfast')">Breakfast Menu</button>
+    <button onclick="showMenu('lunch')">Lunch & Dinner Menu</button>
+    <button onclick="showMenu('continental')">Continental Menu</button>
+  </div>
 
+  <!-- Menu Sections -->
+  <section id="breakfast" class="menu-section active">
+    <h2 class="menu-header">🍽️ National Breakfast</h2>
     <div class="food-grid">
-      <div class="food-card"><img src="images/pap.jpg" alt="Pap" /><div class="food-info"><h4>Pap</h4><p>₦2,500</p></div></div>
-      <div class="food-card"><img src="images/akara.jpg" alt="Akara / Moi-Moi" /><div class="food-info"><h4>Akara / Moi-Moi</h4><p>₦2,000</p></div></div>
-      <div class="food-card"><img src="images/yam.jpg" alt="Yam" /><div class="food-info"><h4>Yam (Fried / Boiled)</h4><p>₦3,000</p></div></div>
-      <div class="food-card"><img src="images/plantain.jpg" alt="Plantain" /><div class="food-info"><h4>Plantain (Fried / Boiled)</h4><p>₦2,000</p></div></div>
-      <div class="food-card"><img src="images/egg.jpg" alt="Egg" /><div class="food-info"><h4>Egg (Omelette / Boiled)</h4><p>₦1,500</p></div></div>
-      <div class="food-card"><img src="images/rice.jpg" alt="Rice" /><div class="food-info"><h4>Rice (White / Jollof)</h4><p>₦3,000</p></div></div>
-      <div class="food-card"><img src="images/sauce.jpg" alt="Sauce" /><div class="food-info"><h4>Sauce (Fish / Egg)</h4><p>₦2,500</p></div></div>
-      <div class="food-card"><img src="images/tea.jpg" alt="Tea" /><div class="food-info"><h4>Tea / Juice / Coffee / Hot Choco</h4><p>₦2,000</p></div></div>
+      <!-- Add your food cards here like you did before -->
+      <div class="food-card">
+        <img src="images/pap.jpg" alt="Pap" />
+        <div class="food-info">
+          <h4>Pap</h4>
+          <p>₦2,500</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="images/akara.jpg" alt="Akara / Moi-Moi" />
+        <div class="food-info">
+          <h4>Akara / Moi-Moi</h4>
+          <p>₦2,000</p>
+        </div>
+      </div>
+
+      <!-- Add more National Breakfast items here -->
+
     </div>
-
-    <div class="meal-caption">
-      <strong>🍽 Bed & Breakfast Option A</strong><br/>
-      Yam / Plantain / Rice with Sauce (Fish or Egg)<br/>
-      Includes complimentary Juice, Tea, Coffee, or Hot Choco.
-    </div>
-
-    <hr style="margin: 2rem 0; border-color: #444;" />
-
-    <h2 class="menu-section">☕ Continental Breakfast</h2>
-
-    <div class="food-grid">
-      <div class="food-card"><img src="images/oats.jpg" alt="Oat / Cereal" /><div class="food-info"><h4>Oat / Cereal</h4><p>₦2,500</p></div></div>
-      <div class="food-card"><img src="images/sausage.jpg" alt="Sausage" /><div class="food-info"><h4>Sausage</h4><p>₦2,000</p></div></div>
-      <div class="food-card"><img src="images/bread.jpg" alt="Bread" /><div class="food-info"><h4>Bread</h4><p>₦1,500</p></div></div>
-      <div class="food-card"><img src="images/scrambled-egg.jpg" alt="Egg" /><div class="food-info"><h4>Egg (Scrambled / Sunny Side Up)</h4><p>₦2,000</p></div></div>
-      <div class="food-card"><img src="images/bacon.jpg" alt="Bacon" /><div class="food-info"><h4>Bacon</h4><p>₦2,000</p></div></div>
-      <div class="food-card"><img src="images/noodles.jpg" alt="Noodles & Egg" /><div class="food-info"><h4>Noodles & Egg</h4><p>₦4,000</p></div></div>
-      <div class="food-card"><img src="images/tea.jpg" alt="Tea" /><div class="food-info"><h4>Tea / Juice / Coffee / Hot Choco</h4><p>₦2,000</p></div></div>
-    </div>
-
-    <div class="meal-caption">
-      <strong>🍽 Bed & Breakfast Option A</strong><br/>
-      Cereal / Oats with Bread and Egg (Omelette / Sauce / Scrambled / Boiled)<br/>
-      Includes complimentary Juice, Tea, Coffee, or Hot Choco.
-    </div>
-
-    <p class="tray-note">⚠️ Please note: All food served in rooms has a tray charge of <strong>₦500</strong>.</p>
+    <h4 class="meal-caption">
+      🍽 Option A: Yam / Plantain / Rice with Sauce (Fish or Egg)<br />
+      Complimentary Juice, Tea, Coffee, or Hot Choco.
+    </h4>
   </section>
 
+  <section id="lunch" class="menu-section">
+    <h2 class="menu-header">🍛 Lunch & Dinner Menu</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <img src="images/goatmeat.jpg" alt="Goat Meat with Chips" />
+        <div class="food-info">
+          <h4>Goat Meat (Chips)</h4>
+          <p>₦6,000</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="images/jollof.jpg" alt="Jollof Rice" />
+        <div class="food-info">
+          <h4>Jollof Rice</h4>
+          <p>₦7,000</p>
+        </div>
+      </div>
+
+      <!-- Add more Lunch items -->
+    </div>
+    <h4 class="meal-caption">Room service available — ₦500 tray charge applies.</h4>
+  </section>
+
+  <section id="continental" class="menu-section">
+    <h2 class="menu-header">🌍 Continental Menu</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <img src="images/oats.jpg" alt="Oats" />
+        <div class="food-info">
+          <h4>Oat / Cereal</h4>
+          <p>₦2,500</p>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <img src="images/bacon.jpg" alt="Bacon" />
+        <div class="food-info">
+          <h4>Bacon</h4>
+          <p>₦2,000</p>
+        </div>
+      </div>
+
+      <!-- Add more Continental items -->
+    </div>
+
+    <h4 class="meal-caption">
+      🍽 Option A: Cereal / Oats with Bread & Egg<br />
+      Complimentary Juice, Tea, Coffee, or Hot Choco.
+    </h4>
+  </section>
+
+  <!-- Bottom Navigation -->
   <nav class="bottom-nav">
     <a href="index.html">Home</a>
     <a href="food.html">Food</a>
@@ -64,8 +152,17 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <footer>
-    &copy; 2025 B&B Wonderland Hotel. All rights reserved.
-  </footer>
+  <script>
+    function showMenu(id) {
+      document.querySelectorAll('.menu-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.querySelectorAll('.menu-toggle button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
 </body>
 </html>
