@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drinks Menu - B&B Wonderland Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .menu-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .menu-toggle button,
+    .menu-toggle a {
+      padding: 0.6rem 1.5rem;
+      background-color: #be9548;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .menu-toggle button.active {
+      background-color: #d2a558;
+    }
+
+    .menu-section {
+      display: none;
+      padding-bottom: 2rem;
+    }
+
+    .menu-section.active {
+      display: block;
+    }
+
+    .menu-header {
+      text-align: center;
+      color: #be9548;
+      margin: 1.2rem 0 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="B&B Wonderland Hotel Logo" class="logo" />
+    <h1 class="hero-title">B&B Wonderland Hotel</h1>
+    <p class="slogan">Explore Our Drinks Menu</p>
+  </header>
+
+  <!-- Toggle Buttons -->
+  <div class="menu-toggle">
+    <a href="cocktails.html">Cocktails</a>
+    <a href="soft-drinks.html">Soft & Energy Drinks</a>
+    <a href="beer.html">Beer</a>
+    <a href="wines-spirits.html">Wines & Spirits</a>
+  </div>
+
+  <!-- Drinks Preview Grid -->
+  <div class="food-grid">
+    <div class="food-card">
+      <img src="images/fantasy-world.jpg" alt="Fantasy World Cocktail" />
+      <div class="food-info">
+        <h4>Fantasy World</h4>
+        <p>₦5,000</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="images/black-bullet.jpg" alt="Black Bullet Energy Drink" />
+      <div class="food-info">
+        <h4>Black Bullet</h4>
+        <p>₦3,000</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="images/heineken.jpg" alt="Heineken Beer" />
+      <div class="food-info">
+        <h4>Heineken</h4>
+        <p>₦2,500</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="images/jameson-small.jpg" alt="Jameson Small" />
+      <div class="food-info">
+        <h4>Jameson Small</h4>
+        <p>₦15,000</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html">Home</a>
+    <a href="food.html">Food</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</body>
+</html>
