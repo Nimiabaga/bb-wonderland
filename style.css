@@ -188,3 +188,9 @@ h1 {
     width: 100%;
   }
 }
+
+/* === Prevent last row being hidden behind nav === */
+.food-grid {
+  padding-bottom: 4rem;
+}
+
