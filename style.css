@@ -193,46 +193,4 @@ h1 {
 .food-grid {
   padding-bottom: 4rem;
 }
-/* === Contact Page Styles === */
-.contact-container {
-  max-width: 600px;
-  margin: 2rem auto 5rem;
-  padding: 2rem;
-  background-color: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.contact-container h2 {
-  color: #be9548;
-  margin-bottom: 1rem;
-}
-
-.contact-item {
-  margin: 1rem 0;
-  font-size: 1rem;
-  color: #ddd;
-}
-
-.contact-item span {
-  display: block;
-  color: #be9548;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-}
-
-.contact-image {
-  width: 100%;
-  max-width: 600px;
-  margin: 1rem auto;
-}
-
-.contact-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 10px;
-}
 
