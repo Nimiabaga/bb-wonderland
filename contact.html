@@ -83,6 +83,25 @@
       height: 300px;
       border: 0;
     }
+
+    /* 💬 Floating WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 20px;
+      z-index: 1000;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
   </style>
 </head>
 <body>
@@ -127,6 +146,15 @@
   <!-- 📞 Floating Call Button -->
   <a href="tel:+2348075455581" class="call-button" title="Call us">
     📞
+  </a>
+
+  <!-- 💬 Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/2348075455581?text=Hello%2C%20I'm%20interested%20in%20booking%20a%20room."
+    class="whatsapp-button"
+    target="_blank"
+    title="Chat on WhatsApp">
+    💬
   </a>
 
   <nav class="bottom-nav">
